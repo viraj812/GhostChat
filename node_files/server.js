@@ -53,6 +53,7 @@ io.on("connection", async (socket) => {
         userConn.forEach(conn => {
             if (conn["socketId"] == socket.id) {
                 id = conn["socketId2"];
+                remove(id);
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
@@ -60,6 +61,7 @@ io.on("connection", async (socket) => {
             }   
             else if (conn["socketId2"] == socket.id) {
                 id = conn["socketId"];
+                remove(id);
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
@@ -77,6 +79,7 @@ io.on("connection", async (socket) => {
         userConn.forEach(conn => {
             if (conn["socketId"] == socket.id) {
                 id = conn["socketId2"];
+                remove(id);
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
@@ -84,6 +87,7 @@ io.on("connection", async (socket) => {
             }   
             else if (conn["socketId2"] == socket.id) {
                 id = conn["socketId"];
+                remove(id);
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
