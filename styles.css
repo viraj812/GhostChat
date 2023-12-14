@@ -210,13 +210,17 @@ h2 {
 }
 
 .sentChats>.msg {
-    max-width: max-content;
+    max-width: 45%;
     max-height: max-content;
+    width: max-content;
     align-self: self-end;
     padding: 2%;
-    background-color: aqua;
-    border-radius: 20%;
-    border: 1px solid blue;
+    padding-right: 4%;
+    padding-left: 4%;
+    color: white;
+    background-color: rgb(4, 58, 119);
+    border-radius: 10px 15px 0px 10px;
+    border: 1px solid rgb(255, 255, 255);
     overflow: visible;
 }
 
@@ -245,13 +249,17 @@ h2 {
 
 .receivedChats>.msg {
 
-    max-width: max-content;
+    max-width: 45%;
     max-height: max-content;
-  
+    
+    width: max-content;
+    
     padding: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
     background-color: rgb(66, 255, 49);
-    border-radius: 20%;
-    border: 1px solid blue;
+    border-radius: 10px 15px 15px 0px;
+    border: 1px solid rgb(0, 0, 0);
     overflow: visible;
 
 }
