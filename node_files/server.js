@@ -3,10 +3,10 @@ const io = require("socket.io")(8882);
 const userId = [];
 const userConn = [];
 
-function remove(element){
-    let index = userId.indexOf(element);
-    userId.splice(index, 1);
-}
+// function remove(element){
+//     let index = userId.indexOf(element);
+//     userId.splice(index, 1);
+// }
 
 io.on("connection", async (socket) => {
     console.clear();
@@ -49,11 +49,11 @@ io.on("connection", async (socket) => {
 
     socket.on("disconnect", () => {
         let id = null;
-        remove(socket.id)
+        
         userConn.forEach(conn => {
             if (conn["socketId"] == socket.id) {
                 id = conn["socketId2"];
-                remove(id);
+                
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
@@ -61,7 +61,7 @@ io.on("connection", async (socket) => {
             }   
             else if (conn["socketId2"] == socket.id) {
                 id = conn["socketId"];
-                remove(id);
+
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
@@ -75,11 +75,11 @@ io.on("connection", async (socket) => {
 
     socket.on("stranger-disconnected", () => {
         let id = null;
-        remove(socket.id);
+    
         userConn.forEach(conn => {
             if (conn["socketId"] == socket.id) {
                 id = conn["socketId2"];
-                remove(id);
+            
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
@@ -87,7 +87,7 @@ io.on("connection", async (socket) => {
             }   
             else if (conn["socketId2"] == socket.id) {
                 id = conn["socketId"];
-                remove(id);
+            
                 console.log(id);
                 let index = userConn.indexOf(conn);
                 userConn.splice(index, 1);
