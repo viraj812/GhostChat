@@ -1,4 +1,4 @@
-const socket = io("http://localhost:8000/", { transports: ['websocket', 'polling', 'flashsocket'] });
+const socket = io("https://stranger-chat-server.onrender.com/", { transports: ['websocket', 'polling', 'flashsocket'] });
 
 var p = document.getElementById("connection_status");
 
@@ -7,7 +7,7 @@ var btnSend = document.getElementById("btnSend");
 var btnStartStop = document.getElementById("btnStartStop");
 
 const waiting_msg = "Waiting for a Stranger to Connect.......";
-const disconnected_msg = "Stranger has been Vanished";
+const disconnected_msg = "Stranger has Vanished";
 const connected_msg = "Stranger Connected";
 const me = "You";
 const stranger = "Stranger";
