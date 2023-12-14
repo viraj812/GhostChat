@@ -9,10 +9,7 @@
 
   "dependencies": {
     "socket.io": "^4.7.2",
-    "nodemon": "3.0.2",
-    "npm": "10.2.5",
-    "npx": "10.2.2",
-    "node": "21.2.0"
+    "nodemon": "3.0.2"
   },
 
   "keywords": [],
