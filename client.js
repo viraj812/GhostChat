@@ -61,8 +61,8 @@ socket.on("connect", () => {
 
 
 function sendMsg() {
-    var txtMsg = document.getElementById("txtMsg").value;
-    var validated_msg = String(txtMsg);
+    var txtMsg = document.getElementById("txtMsg");
+    var validated_msg = String(txtMsg.value);
     if(validated_msg != ""){
         socket.emit("message-sent", validated_msg, roomId);
 
@@ -85,6 +85,8 @@ function sendMsg() {
         box.appendChild(identity);
 
         txtChats.scrollTop = txtChats.scrollHeight;
+
+        txtMsg.value = "";
     }
 }
 
@@ -97,6 +99,7 @@ function startStopConnection(){
     }
     else {
         btnStartStop.value = "Start";
+        btnSend.disabled = true;
         p.innerText = "Stopped";
         socket.emit("stranger-disconnected");
     }
