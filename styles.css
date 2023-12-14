@@ -106,7 +106,7 @@ h1 {
     position: relative;
     display: flex;
     flex-direction: column;
-
+    overflow: scroll;
     border: 1px solid black;
     margin: 5%;
     margin-top: 10%;
@@ -118,6 +118,10 @@ h1 {
 
     align-items: center;
     background-color: gray;
+}
+
+#chat_area::-webkit-scrollbar{
+    display: none;
 }
 
 #chat_area > p{
