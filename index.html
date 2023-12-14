@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0">
+    <title>Stranger Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <h1>Stranger Chat</h1>
+    </nav>
+
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+
+    <div id="chat_area">
+        <h2>Chat Here</h2>
+        <div id="msg_box">
+
+            <p id="connection_status" style="font-weight: bold;"></p>
+
+            <div id="txtChats"></div>
+            
+        </div>
+
+        <div id="inputsDiv">
+            <input type="button" value="Start" id="btnStartStop" onclick="startStopConnection()">
+
+            <input type="text" name="txtMsg" id="txtMsg" placeholder="Enter Message Here">
+
+            <input type="button" value="Send" id="btnSend" onclick="sendMsg()" disabled>
+        </div>
+
+        <br><br><br><br>
+    </div>
+
+    <footer>
+        <b>Contact Information</b>
+        <p>Stranger Chat<br>
+            <br>Mobile: 9999999999 <br>
+            <br>Email: user@example.com <br>
+        </p>
+        This is the End
+    </footer>
+</body>
+
+</html>
