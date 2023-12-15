@@ -1,5 +1,3 @@
-// const socket = io("https://stranger-chat-server.onrender.com/", { transports: ['websocket', 'polling', 'flashsocket'] });
-
 const socket = io("https://stranger-chat-server.onrender.com/", { transports: ['websocket', 'polling', 'flashsocket'] });
 
 var p = document.getElementById("connection_status");
