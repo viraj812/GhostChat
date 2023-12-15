@@ -105,11 +105,13 @@ h1 {
     position: relative;
     flex-direction: column;
 
+    min-height: max-content;
+    min-width: 80%;
     max-width: 100%;
     max-height: 100%;
 
     text-wrap: wrap;
-    /* overflow: scroll; */
+    overflow-wrap: break-word;
     border: 1px solid black;
     margin: 5%;
     margin-top: 10%;
@@ -149,6 +151,8 @@ h2 {
     display: flex;
     flex-direction: column-reverse;
 
+    min-height: max-content;
+    min-width: max-content;
     max-height: 80%;
     max-width: 100%;
 
@@ -181,6 +185,9 @@ h2 {
 #txtChats {
     position: relative;
     justify-content: start;
+
+    min-height: max-content;
+    min-width: max-content;
     max-width: 100%;
     max-height: 100%;
 
@@ -212,7 +219,7 @@ h2 {
 }
 
 .sentChats>.msg {
-    max-width: 45%;
+    max-width: 50%;
     max-height: max-content;
     width: max-content;
     align-self: self-end;
@@ -223,7 +230,7 @@ h2 {
     background-color: rgb(4, 58, 119);
     border-radius: 10px 15px 0px 10px;
     border: 1px solid rgb(255, 255, 255);
-    overflow: visible;
+    overflow-wrap: break-word;
 }
 
 .sentChats>.identity {
@@ -251,7 +258,7 @@ h2 {
 
 .receivedChats>.msg {
 
-    max-width: 45%;
+    max-width: 50%;
     max-height: max-content;
     
     width: max-content;
@@ -262,7 +269,7 @@ h2 {
     background-color: rgb(66, 255, 49);
     border-radius: 10px 15px 15px 0px;
     border: 1px solid rgb(0, 0, 0);
-    overflow: visible;
+    overflow-wrap: break-word;
 
 }
 
