@@ -13,7 +13,7 @@ function remove(e) {
 
 io.on("connection", async (socket) => {
     console.clear();
-
+    const token = socket.handshake.auth.token;
     socket.on("start-connection", () => {
 
         if (!userId.includes(socket.id)) {
