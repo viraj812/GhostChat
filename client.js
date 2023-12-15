@@ -1,23 +1,6 @@
 // const socket = io("https://stranger-chat-server.onrender.com/", { transports: ['websocket', 'polling', 'flashsocket'] });
 
-var token = null;
-
-function loadFile(filePath) {
-    var result = null;
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", filePath, false);
-    xmlhttp.send();
-    if (xmlhttp.status==200) {
-      result = xmlhttp.responseText;
-    }
-    return result;
-  }
-
-const auth_key_file = loadFile("./etc/secrets/auth_key.txt");
-
-console.log(auth_key_file);
-
-const socket = io("https://stranger-chat-server.onrender.com/", { transports: ['websocket', 'polling', 'flashsocket'], auth: { token: client_token } });
+const socket = io("https://stranger-chat-server.onrender.com/", { transports: ['websocket', 'polling', 'flashsocket'] });
 
 var p = document.getElementById("connection_status");
 

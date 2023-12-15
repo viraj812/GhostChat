@@ -11,7 +11,6 @@ function remove(e) {
     }
 }
 
-
 io.on("connection", async (socket) => {
     console.clear();
 
